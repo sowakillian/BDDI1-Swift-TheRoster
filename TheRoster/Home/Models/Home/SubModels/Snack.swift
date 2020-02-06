@@ -14,5 +14,5 @@ struct Snack {
     var ingredients:String
     var price:String
     var quantity:Int
-    static var height:Float = 50
+    static var height:Float = 100
 }

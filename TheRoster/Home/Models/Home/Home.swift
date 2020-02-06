@@ -22,7 +22,7 @@ class Home {
     static func defaultHome() -> Home {
         return Home(c:Carousel(images:[]),
                               g: HomeGrid(images:[]),
-                              s: [Snack(name: "Snack1", ingredients: "Ing 1", price: "3E", quantity: 0)
+                              s: [Snack(name: "Snack1", ingredients: "Ing 1", price: "3E", quantity: 0),
                             ]
         )
     }

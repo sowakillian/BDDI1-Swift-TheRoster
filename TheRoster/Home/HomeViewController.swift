@@ -85,7 +85,7 @@ extension HomeViewController:UITableViewDelegate {
         if indexPath.section == 2 {
             return CGFloat(Snack.height)
         }
-        return CGFloat(200)
+        return 0
     }
 }
 

@@ -29,7 +29,6 @@ class ObjectListViewController: UIViewController {
         AF.request("https://jsonplaceholder.typicode.com/todos").response { response in
             
             if let jsonData = response.data {
-                //self.requestResponse.text = String(data: jsonData, encoding:.utf8)
                 
                 if let todo = try? JSONDecoder().decode(Todo.self, from: jsonData) {
                   print(type(of: todo))
@@ -52,14 +51,11 @@ extension ObjectListViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
+       let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell", for: indexPath) as! FirstTableViewCell
         
-        cell.todoElementLabel.text = todoList[indexPath.row].display()
+       cell.todoElementLabel.text = todoList[indexPath.row].display()
         
-            return cell
-    
-        
+       return cell
     }
     
 }
